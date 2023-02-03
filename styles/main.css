@@ -1,0 +1,62 @@
+body{
+    background: #999;
+}
+
+.encabezado{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background: #000;
+    margin-bottom: 60px;
+    text-justify: center;
+}
+.centrado{
+    text-align: center;
+}
+.headTit{
+    text-align: center;
+}
+
+.botonAdd{
+    float: left;
+    align-content: center;
+    margin-right: 40vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+}
+
+/* -------------------------------------- */
+
+.tareasVisibles{
+    *display: none;
+}
+
+/* ----------------------------------------- */
+
+.modal{
+    margin-top: 200px;
+}
+
+/*
+    Luego analizar bien esta parte de los li que se agregan
+.liADD{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: top;
+} */
+.izq{
+    float: left;
+}
+
+.txt{
+    display: inline-block;
+}
+
+.mas{
+    float:right;
+    border-radius: 50%;
+    
+}
