@@ -11,6 +11,10 @@ body{
     margin-bottom: 60px;
     text-justify: center;
 }
+
+.encabezado h1{
+    color: aliceblue;
+}
 .centrado{
     text-align: center;
 }
@@ -19,7 +23,7 @@ body{
 }
 
 .botonAdd{
-    float: left;
+    float: right;
     align-content: center;
     margin-right: 40vh;
     margin-top: 50px;
@@ -59,4 +63,17 @@ body{
     float:right;
     border-radius: 50%;
     
+}
+
+
+/* Espaciado dentro del pop up */
+
+
+.espacio{
+    margin-bottom: 30px;
+}
+
+.imagenLista{
+    width: 40px;
+    height: 30px;
 }

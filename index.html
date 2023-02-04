@@ -32,21 +32,18 @@
 
 
                         <!-- Modelo de lo que se agrega -->
-                        <li class="list-group-item centrado liADD">
+<!--                         <li class="list-group-item centrado liADD">
                             <img src="" alt="." class="izq" id="imagen">
                             <p class="txt centrado" id="txt">
                                 ASKDJAKSLJD
-                            </p>
-
-                            <!-- Esto tiene que ser un modal -->
-
+                            </p> -->
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary mas" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<!--                             <button type="button" class="btn btn-primary mas" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 +
-                            </button>
+                            </button> -->
                             
                             <!-- Modal -->
-<!--                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -61,9 +58,9 @@
                                         </p>
                                     </div>
                                     <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div> -->
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Listo gracias</button>
+                                    <!--button type="button" class="btn btn-primary">Save changes</button>
+                                    </div -->
                                 </div>
                                 </div>
                             </div>
@@ -85,29 +82,54 @@
         <div class="col-md-3"></div>
         <div class="col-md-3"></div>
         <div class="col-md-3 centrado headTit">
-            <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary botonAdd" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+    
+    <!-- Modal  -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary botonAdd" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
         +
     </button>
     
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Agregame cositas!</h1>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar cosishas</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            
+                <h5 class="espacio">
+                    Nombre del producto
+                </h5>
+                <!-- Input para el producto -->
+                <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="productoIngresado">
+                </div>
+
+                <h5 class="espacio">
+                    Tipo de producto
+                </h5>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>Seleccione una opcion</option>
+                        <option value="1">Verduras</option>
+                        <option value="2">Lacteos</option>
+                        <option value="3">Carne</option>
+                        <option value="4">Electronica</option>
+                    </select>
+                </div>
+                <h5 class="espacio">
+                    Descripcion
+                </h5>
+                <div class="input-group">    
+                    <textarea class="form-control" aria-label="With textarea" placeholder="describa brevemente" id="descripcion"></textarea>
+                </div>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                Cerrar
-            </button>
-            <button type="button" class="btn btn-primary" id="btnADD">
-                Agregar!
-            </button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" id="btnADD" >Agregar</button>
             </div>
         </div>
         </div>
