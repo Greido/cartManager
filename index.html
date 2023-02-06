@@ -22,6 +22,20 @@
         </div>
     </header>
 
+
+    <!-- Cuando no hay tareas se ve esto -->
+
+    <secction class="noHayContenido" id="noContent">
+        <h1 class="titNoContent">
+            No tenes nada en la listilla
+        </h1>
+        <h5 class="tituloChico">
+            Agrega cosas con el boton de abajo a la derecha
+        </h5>
+    </section>
+
+
+    <!-- Cuando hay tareas se ve esto -->
     <section class="tareas tareasVisibles">
         <div class="container">
             <div class="row">
@@ -36,7 +50,8 @@
                             <img src="" alt="." class="izq" id="imagen">
                             <p class="txt centrado" id="txt">
                                 ASKDJAKSLJD
-                            </p> -->
+                            </p> 
+                        </li> -->
                             <!-- Button trigger modal -->
 <!--                             <button type="button" class="btn btn-primary mas" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 +
@@ -76,7 +91,9 @@
         </div>
     </section>
 
-    
+    <button type="button" class="btn btn-primary botonAdd" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
+        +
+    </button>
     <div class="container">
         <div class="col-md-3"></div>
         <div class="col-md-3"></div>
@@ -86,9 +103,7 @@
     
     <!-- Modal  -->
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary botonAdd" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
-        +
-    </button>
+
     
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -100,7 +115,7 @@
             </div>
             <div class="modal-body">
                 <h5 class="espacio">
-                    Nombre del producto
+                Nombre del producto
                 </h5>
                 <!-- Input para el producto -->
                 <div class="input-group input-group-sm mb-3">

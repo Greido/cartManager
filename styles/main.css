@@ -23,6 +23,9 @@ body{
 }
 
 .botonAdd{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
     float: right;
     align-content: center;
     margin-right: 40vh;
@@ -35,12 +38,15 @@ body{
 
 .tareasVisibles{
     *display: none;
+    margin-bottom: 30px;
+    min-height: 100vh;
+    min-width: 97vw;
 }
 
 /* ----------------------------------------- */
 
 .modal{
-    margin-top: 200px;
+    margin-top: 80px;
 }
 
 /*
@@ -76,4 +82,16 @@ body{
 .imagenLista{
     width: 40px;
     height: 30px;
+}
+
+.noHayContenido{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    
+}
+
+.noHayContenido .tituloChico{
+    text-align: center;
 }
