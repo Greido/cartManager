@@ -25,7 +25,7 @@
 
     <!-- Cuando no hay tareas se ve esto -->
 
-    <secction class="noHayContenido" id="noContent">
+    <section class="noHayContenido" id="noContent">
         <h1 class="titNoContent">
             No tenes nada en la listilla
         </h1>
@@ -36,7 +36,7 @@
 
 
     <!-- Cuando hay tareas se ve esto -->
-    <section class="tareas tareasVisibles">
+    <section class="tareas tareasVisibles" id="tareasVisibles">
         <div class="container">
             <div class="row">
                 <div class="col-md-4"></div>
@@ -44,44 +44,9 @@
                     <ul class="list-group" id="ulPadre">
                         <li class="list-group-item centrado">LISTA</li>
 
-
-                        <!-- Modelo de lo que se agrega -->
-<!--                         <li class="list-group-item centrado liADD">
-                            <img src="" alt="." class="izq" id="imagen">
-                            <p class="txt centrado" id="txt">
-                                ASKDJAKSLJD
-                            </p> 
-                        </li> -->
-                            <!-- Button trigger modal -->
-<!--                             <button type="button" class="btn btn-primary mas" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                +
-                            </button> -->
-                            
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                                        Nombre de la cosa
-                                    </h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>
-                                            Aqui dentro se muestra el contenido
-                                        </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Listo gracias</button>
-                                    <!--button type="button" class="btn btn-primary">Save changes</button>
-                                    </div -->
-                                </div>
-                                </div>
-                            </div>
-
                         </li>
-                        <!-- --------------------------- -->
+                        
+                        <!------------------------- -->
 
                     </ul>
                 </div>
@@ -114,44 +79,40 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h5 class="espacio">
-                Nombre del producto
-                </h5>
-                <!-- Input para el producto -->
-                <div class="input-group input-group-sm mb-3">
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="productoIngresado">
-                </div>
+                <form action="#" class="formulario" id="formulario" novalidate>                       
+                    <h6>
+                            Ingrese nombre del producto
+                    </h6>
+                    <div class="input-group input-group-sm mb-3">
 
-                <h5 class="espacio">
-                    Tipo de producto
-                </h5>
-                <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
-                    <select class="form-select" id="inputGroupSelect01">
-                        <option selected>Seleccione una opcion</option>
-                        <option value="1">Verduras</option>
-                        <option value="2">Lacteos</option>
-                        <option value="3">Carne</option>
-                        <option value="4">Electronica</option>
-                    </select>
-                </div>
-                <h5 class="espacio">
-                    Descripcion
-                </h5>
-                <div class="input-group">    
-                    <textarea class="form-control" aria-label="With textarea" placeholder="describa brevemente" id="descripcion"></textarea>
-                </div>
+                        <input type="text" class="form-control titulo" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="titulo">
+                    </div>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Categorias</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option selected>Selecciona su categoria</option>
+                            <option value="Verduras.png">Verduras</option>
+                            <option value="Lacteos.png">Lacteos</option>
+                            <option value="Carne.png">Carne</option>
+                            <option value="Electronica.png">Electronica</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Agregue una descripcion</label>
+                        <textarea class="form-control" id="descripcion" rows="3" placeholder="Agrega una descripcion breve"></textarea>
+                    </div> 
+
+                    <button type="submit" class="btn btn-primary" id="btnADD">Agregar</button>
+                </form>
             </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary" id="btnADD" >Agregar</button>
-            </div>
+
         </div>
         </div>
     </div>
 
 
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="/scripts/script.js"></script>
 </body>

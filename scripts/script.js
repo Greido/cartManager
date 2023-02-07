@@ -1,7 +1,11 @@
 
-
+let listas = document.getElementById("tareasVisibles");
+let listasVacias = document.getElementById('noContent')
+let modalForm = document.getElementById('staticBackdrop')
 
  /* IDs del formulario de ingreso */
+
+let formulario = document.getElementById('formulario')
 
 let producto = document.getElementById('productoIngresado');
 
@@ -10,71 +14,56 @@ let categoria = document.getElementById('inputGroupSelect01');
 let descripcion = document.getElementById('descripcion')
 
 
-/*  */
-
-
-
-let txt = 'Hola gay'
 let boton = document.getElementById('btnADD');
 let contenedor = document.getElementById('ulPadre')
 
+let tituloCont = document.getElementById('verMasTitulo')
 
+/* Test de fomrmulario :D */
+const verMas=(titulo,categoria,descripcion)=>{
+    console.log(descripcion)
+    console.log(titulo)
+    console.log(categoria)
 
-
-
-
-/* 
-document.addEventListener('click',function(e){
-    console.log(e)
-})
- */
-
-
-/* Funcion constructura del listado */
-
-const addELement=()=>{
-    
-    let prodFinal = producto.value
-    let catFinal = categoria.value
-    let descFinal = descripcion.value
-
-    if (catFinal==1){
-        catFinal = 'Verduras.png'
-    } else if (catFinal == 2){
-        catFinal = 'Lacteos.png'
-    }else if (catFinal == 3){
-        catFinal = 'Carne.png'
-    }else if (catFinal == 4){
-        catFinal = 'Electronica.png'
-    }
-
-    console.log(catFinal)
 
     
-    let modelo = `<li class="list-group-item centrado liADD">
-    <img src="/images/${catFinal}" alt="." class="izq imagenLista" id="imagen">
-    <p class="txt centrado" id="txt">
-    ${prodFinal}
-    </p>
-
-    <!-- Esto tiene que ser un modal -->
-
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary mas" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="verMas">
-    +
-    </button>`;
-
-    contenedor.innerHTML += modelo
-
 }
 
-/* --------------------------------- */
+const addItem =(titulo,categoria,descripcion)=>{
+    console.log(descripcion,categoria,titulo);    
+    let modelo = `<li class="list-group-item centrado liADD">
+    <img src="/images/${categoria}" alt="." class="izq imagenLista" id="imagen">
+    <p class="txt centrado" id="txt">
+    ${titulo}
+    </p>
 
-boton.addEventListener('click',()=>{
-    addELement()
+    <button type="button" class="btn btn-primary mas"onclick="verMas('${titulo}', '${categoria}', '${descripcion}')">+</button>`;
+    contenedor.innerHTML+=modelo
+    
+}
 
+
+formulario.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    let titulo= e.target.titulo.value;
+    let categoria = e.target.inputGroupSelect01.value;
+    let descripcion = e.target.descripcion.value;
+    
+
+
+    if (titulo&&categoria&&descripcion){
+        console.log('el form esta completo');
+        addItem(titulo,categoria,descripcion) ;
+        listasVacias.style.display="none";
+        listas.style.display="flex";
+        formulario.reset();
+        
+    } else {
+        alert('Debe completar el formulario')
+    }
+
+    
 })
-
 
 
 
