@@ -17,17 +17,61 @@ let descripcion = document.getElementById('descripcion')
 let boton = document.getElementById('btnADD');
 let contenedor = document.getElementById('ulPadre')
 
-let tituloCont = document.getElementById('verMasTitulo')
+let tituloCont = document.getElementById('verMasCont')
+let closeVerMas = document.getElementById('closeVerMas')
+let colVM = document.getElementById('colMdVM')
 
 /* Test de fomrmulario :D */
+
+
+
 const verMas=(titulo,categoria,descripcion)=>{
     console.log(descripcion)
     console.log(titulo)
     console.log(categoria)
+    console.log(tituloCont)
+
+    listas.style.display="none"
+    colVM.style.display="flex"
 
 
-    
+
+    let verMasModel = `<h5 class="card-title">
+                            <img src="/images/${categoria}" class="imagenLista" alt="">
+                            ${titulo}
+                        </h5>
+                        <p class="card-text">
+                            ${descripcion}
+                        </p>`
+
+    tituloCont.innerHTML = verMasModel;
+    closeVerMas.addEventListener('click',()=>{
+        colVM.style.display="none"
+        listas.style.display="flex"
+    })
+
 }
+
+
+/* 
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
 
 const addItem =(titulo,categoria,descripcion)=>{
     console.log(descripcion,categoria,titulo);    

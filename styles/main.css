@@ -21,7 +21,10 @@ body{
 .headTit{
     text-align: center;
 }
-
+.centradito{
+    display: flex;
+    align-content: center;
+}
 .botonAdd{
     position: fixed;
     bottom: 10px;
@@ -42,7 +45,12 @@ body{
     min-height: 100vh;
     min-width: 97vw;
 }
+/* ---------------------------------------- */
 
+.colVerMas{
+    display: none;
+    align-content: center;
+}
 
 /* ----------------------------------------- */
 
